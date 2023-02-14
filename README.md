@@ -24,8 +24,14 @@ Things you will need:
 * Broadcast instruction : `_mm256_broadcast_sd`
 * FMA instruction       : `_mm256_fmadd_pd`
 
+Understanding the intrinsics:
 
-`256` refers to the number of bits in the register
-`u` refers to unalinged load/store
-`pd` refers to packed doubles.
-`sd` refers to single double.
+| | Explanation |
+| :---        |    :----  |   
+| `256`  | number of bits in the register |
+| `u` | unalinged load/store |
+| `pd` | packed doubles |
+| `sd` | single double |
+
+Further reference for intrinsics: https://www.intel.com/content/www/us/en/docs/intrinsics-guide/index.html#techs=AVX_ALL&ig_expand=628
+
