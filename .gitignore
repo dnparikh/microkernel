@@ -22,4 +22,4 @@
 .DS_Store
 
 #matlab output files
-*.m
+output_*.m
