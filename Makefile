@@ -23,13 +23,13 @@ UTIL_OBJS  := FLA_Clock.o MaxAbsDiff.o RandomMatrix.o
 
 # ---------------------
 
-OBJS_IJP := driver.o Gemm_IJP.o Ger_J_Axpy.o Axpy.o
+OBJS_IJP := driver.o Gemm_IJP.o #Ger_J_Axpy.o Axpy.o
 
 driver_IJP.x: $(OBJS_IJP) $(UTIL_OBJS)
 	$(LINKER) $(OBJS_IJP) $(UTIL_OBJS) $(BLAS_LIB) -o driver_IJP.x $(LDFLAGS) 
 
 IJP: driver_IJP.x
-	echo "$(NREPEATS) $(NFIRST) $(NLAST_SMALL) $(NINC)" | ./driver_IJP.x 
+	echo "$(NREPEATS) $(NFIRST) $(NLAST) $(NINC)" | ./driver_IJP.x  > output_ukernel.m
 
 # ---------------------
 

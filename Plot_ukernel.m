@@ -31,7 +31,7 @@ close all
 % implementation) and fifth colum (for IJP) of the data file. 
 
 % Create figure
-figure2 = figure('Name','GFLOPS');
+figure2 = figure('Name','GFLOPS','visible','off');
 
 % Create axes, labels, legends.  In future routines for plotting performance, 
 % the next few lines will be hidden in the script.
